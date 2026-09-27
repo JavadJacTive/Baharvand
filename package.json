@@ -1,0 +1,13 @@
+{
+  "name": "daneshjoo-baharvand",
+  "version": "1.0.0",
+  "description": "فرم سه‌مرحله‌ای ثبت‌نام (دانشجوی بهاروند) با اتصال به پایگاه داده SQLite",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "express": "^4.19.2"
+  }
+}

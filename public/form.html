@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ثبت‌نام پروژه — دانشجوی بهاروند</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="brand"><span class="brand-mark"></span> دانشجوی بهاروند</div>
+    <nav>
+      <a href="form.html" class="active">فرم ثبت‌نام</a>
+      <a href="index.html">داشبورد</a>
+    </nav>
+  </div>
+
+  <div class="panel">
+
+    <div class="tracker" id="tracker">
+      <div class="tracker-step" data-step="1">
+        <div class="tracker-dot">۱</div>
+        <div class="tracker-label">مشخصات اولیه</div>
+      </div>
+      <div class="tracker-line"></div>
+      <div class="tracker-step" data-step="2">
+        <div class="tracker-dot">۲</div>
+        <div class="tracker-label">علایق و تجربه</div>
+      </div>
+      <div class="tracker-line"></div>
+      <div class="tracker-step" data-step="3">
+        <div class="tracker-dot">۳</div>
+        <div class="tracker-label">جزئیات پروژه</div>
+      </div>
+    </div>
+
+    <!-- ===== Step 1 ===== -->
+    <section class="step" id="step-1">
+      <p class="eyebrow">مرحله ۱ از ۳</p>
+      <h1 class="title">اول از همه، خودتون رو معرفی کنید</h1>
+      <p class="subtitle">این اطلاعات برای هماهنگی و پیگیری ثبت‌نام شما استفاده می‌شه.</p>
+
+      <form id="form-1" novalidate>
+        <div class="field">
+          <label for="full_name">نام و نام خانوادگی</label>
+          <input type="text" id="full_name" name="full_name" placeholder="مثلاً علی رضایی" autocomplete="name" />
+          <span class="error-msg" style="display:none;">این فیلد الزامی است.</span>
+        </div>
+        <div class="field">
+          <label for="email">ایمیل</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" />
+          <span class="error-msg" style="display:none;">یک ایمیل معتبر وارد کنید.</span>
+        </div>
+        <div class="field">
+          <label for="phone">شماره تماس</label>
+          <input type="tel" id="phone" name="phone" placeholder="0912xxxxxxx" autocomplete="tel" />
+          <span class="error-msg" style="display:none;">این فیلد الزامی است.</span>
+        </div>
+        <div class="field">
+          <label for="city">شهر</label>
+          <input type="text" id="city" name="city" placeholder="مثلاً تهران" />
+          <span class="error-msg" style="display:none;">این فیلد الزامی است.</span>
+        </div>
+
+        <div class="actions">
+          <span></span>
+          <button type="submit" class="btn-primary">ادامه به مرحله بعد</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ===== Step 2 ===== -->
+    <section class="step" id="step-2" style="display:none;">
+      <p class="eyebrow">مرحله ۲ از ۳</p>
+      <h1 class="title">علایق و تجربه‌تون توی گیم دیولوپمنت</h1>
+      <p class="subtitle">این بخش کمک می‌کنه پروژه رو متناسب با تجربه شما بچینیم.</p>
+
+      <form id="form-2" novalidate>
+        <div class="field">
+          <label>سطح تجربه با Unity</label>
+          <div class="radio-grid" data-group="experience_level">
+            <label class="radio-card"><input type="radio" name="experience_level" value="beginner" />تازه‌کار</label>
+            <label class="radio-card"><input type="radio" name="experience_level" value="intermediate" />متوسط</label>
+            <label class="radio-card"><input type="radio" name="experience_level" value="advanced" />پیشرفته</label>
+            <label class="radio-card"><input type="radio" name="experience_level" value="pro" />حرفه‌ای</label>
+          </div>
+          <span class="error-msg" style="display:none;">یک گزینه انتخاب کنید.</span>
+        </div>
+
+        <div class="field">
+          <label>حوزه موردعلاقه</label>
+          <div class="radio-grid" data-group="focus_area">
+            <label class="radio-card"><input type="radio" name="focus_area" value="2d" />۲بعدی</label>
+            <label class="radio-card"><input type="radio" name="focus_area" value="2.5d" />۲.۵بعدی</label>
+            <label class="radio-card"><input type="radio" name="focus_area" value="3d" />۳بعدی</label>
+            <label class="radio-card"><input type="radio" name="focus_area" value="vr" />واقعیت مجازی</label>
+          </div>
+          <span class="error-msg" style="display:none;">یک گزینه انتخاب کنید.</span>
+        </div>
+
+        <div class="field">
+          <label for="target_platform">پلتفرم هدف</label>
+          <select id="target_platform" name="target_platform">
+            <option value="">انتخاب کنید...</option>
+            <option value="android">اندروید</option>
+            <option value="ios">iOS</option>
+            <option value="desktop">دسکتاپ (ویندوز/لینوکس)</option>
+            <option value="web">وب</option>
+            <option value="multi">چندپلتفرمی</option>
+          </select>
+          <span class="error-msg" style="display:none;">یک گزینه انتخاب کنید.</span>
+        </div>
+
+        <div class="field">
+          <label for="project_summary">یک خط درباره‌ی ایده‌ی فعلیتون بنویسید</label>
+          <textarea id="project_summary" name="project_summary" placeholder="مثلاً یه بازی پرشی ۲بعدی با جت جنگنده..."></textarea>
+          <span class="error-msg" style="display:none;">این فیلد الزامی است.</span>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn-ghost" id="back-to-1">بازگشت</button>
+          <button type="submit" class="btn-primary">ادامه به مرحله بعد</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ===== Step 3 ===== -->
+    <section class="step" id="step-3" style="display:none;">
+      <p class="eyebrow">مرحله ۳ از ۳</p>
+      <h1 class="title">جزئیات نهایی پروژه</h1>
+      <p class="subtitle">آخرین قدم! این اطلاعات رو کامل کنید تا ثبت‌نام نهایی بشه.</p>
+
+      <form id="form-3" novalidate>
+        <div class="field">
+          <label for="idea_name">نام پروژه یا ایده</label>
+          <input type="text" id="idea_name" name="idea_name" placeholder="مثلاً «پرواز شبانه»" />
+          <span class="error-msg" style="display:none;">این فیلد الزامی است.</span>
+        </div>
+
+        <div class="field">
+          <label for="genre">ژانر بازی</label>
+          <select id="genre" name="genre">
+            <option value="">انتخاب کنید...</option>
+            <option value="action">اکشن</option>
+            <option value="puzzle">پازل</option>
+            <option value="platformer">پلتفرمر</option>
+            <option value="arcade">آرکید</option>
+            <option value="strategy">استراتژی</option>
+            <option value="other">سایر</option>
+          </select>
+          <span class="error-msg" style="display:none;">یک گزینه انتخاب کنید.</span>
+        </div>
+
+        <div class="field">
+          <label for="timeline">بازه‌ی زمانی تکمیل پروژه</label>
+          <select id="timeline" name="timeline">
+            <option value="">انتخاب کنید...</option>
+            <option value="1m">کمتر از ۱ ماه</option>
+            <option value="3m">۱ تا ۳ ماه</option>
+            <option value="6m">۳ تا ۶ ماه</option>
+            <option value="12m">بیش از ۶ ماه</option>
+          </select>
+          <span class="error-msg" style="display:none;">یک گزینه انتخاب کنید.</span>
+        </div>
+
+        <div class="field">
+          <label for="portfolio_link">لینک نمونه‌کار <span style="color:var(--muted); font-weight:400;">(اختیاری)</span></label>
+          <input type="url" id="portfolio_link" name="portfolio_link" placeholder="https://..." />
+        </div>
+
+        <div class="field">
+          <label for="extra_notes">توضیحات تکمیلی <span style="color:var(--muted); font-weight:400;">(اختیاری)</span></label>
+          <textarea id="extra_notes" name="extra_notes" placeholder="هر نکته‌ی دیگه‌ای که فکر می‌کنید مهمه..."></textarea>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn-ghost" id="back-to-2">بازگشت</button>
+          <button type="submit" class="btn-primary">ثبت نهایی</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ===== Success ===== -->
+    <section class="step" id="step-done" style="display:none;">
+      <div class="success-box">
+        <div class="success-icon">✓</div>
+        <h1 class="title">ثبت‌نام شما با موفقیت انجام شد</h1>
+        <p class="subtitle" style="margin:0 auto;">اطلاعات شما در پایگاه داده ذخیره شد. می‌تونید نتیجه رو توی داشبورد ببینید.</p>
+        <div class="actions" style="justify-content:center; gap:12px;">
+          <a href="index.html"><button type="button" class="btn-primary">مشاهده داشبورد</button></a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <p class="form-note">اطلاعات شما به‌صورت محلی در پایگاه داده SQLite همین سرور ذخیره می‌شود.</p>
+
+  <script src="js/form.js"></script>
+</body>
+</html>
